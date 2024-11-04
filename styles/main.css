@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(250, 245, 255);
+}
+section {
+    margin-top: 30px;
+}
+a, i, h1, h2, h3, h4, h5, h6 {
+    color: rgb(112, 69, 194)!important;
+}
+a:hover {
+    color: rgb(78, 47, 135)!important;
+}
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: rgb(139, 102, 208)!important;
+}
+.questions-container {
+    background-color: white;
+    width: max-content;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.container {
+    margin-top: 30px;
+}
+.banner-container {
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-item {
+    width: 50%;
+    padding: 40px;
+}
+.requirement-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+.requirement-icon {
+    position: relative;
+    top: -20%;
+}
+#advantage-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 100px 50px;
+}
+.advantage-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.advantage-img {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+#qa-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 100px 50px;
+}
+#footer-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px 50px;
+}
+.contact-item {
+    display: flex;
+}
+.contact-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column-reverse;
+    }
+    .banner-item {
+        width: 100%;
+        padding: 10px;
+    }
+    #advantage-section {
+        padding: 40px 15px;
+    }
+}
