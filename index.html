@@ -9,22 +9,25 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKT0_PimYrzlNdQyq8568CWtLa4-uoSL4&loading=async&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
 </head>
 
 <body>
     <ul class="nav justify-content-end align-items-center">
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="https://t.me/a/#1287560893" class="nav-link">
                 <i class="bi bi-telegram h4"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="https://www.instagram.com/kreditomat24_uzb?igsh=MXZrN2wzdHVteGhiYQ==">
                 <i class="bi bi-instagram h4"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="https://www.facebook.com/share/1KeCwcjR6n/">
                 <i class="bi bi-facebook h4"></i>
             </a>
         </li>
@@ -49,19 +52,16 @@
             <div class="navbar-collapse collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">О нас</a>
+                        <a class="nav-link" href="#advantage-section">Плюсы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Реквизиты</a>
+                        <a class="nav-link" href="#requirement-section">Требования к заемщику</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Документы</a>
+                        <a class="nav-link" href="#calculator-section">Рассчитайте стоимость</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Вопросы и ответы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="#qa-section">Вопросы и ответы</a>
                     </li>
                     <li class="nav-item d-sm-none">
                         <a class="nav-link" href="#">Как получить микрозайм?</a>
@@ -89,14 +89,14 @@
                 <div class="col-sm-12 col-md-6">
                     <h2><b>"Деньги до зарплаты"</b> - микрозайм на срочные нужды на короткий срок!</h2>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <img class="banner-img" src="img/istockphoto-157590565-612x612.jpg" alt="banner">
+                <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <img class="banner-img" src="img/microloan.png" alt="banner">
                 </div>
             </div>
         </section>
 
         <section id="advantage-section">
-            <h2 style="text-align: center;">Плюсы обращения в нашу МФО</h2>
+            <h2 class="text-center">Плюсы обращения в нашу МФО</h2>
 
             <div class="container">
                 <div class="row">
@@ -146,7 +146,8 @@
                     В любом из филиалов. Обратитесь в офис компании в рабочее время, подготовив необходимые документы.
                 </li>
                 <li>
-                    Онлайн — через мобильное приложение. Заполнив анкету с указанием желаемой суммы. После заполнения анкеты вы получите решение.
+                    Онлайн — через мобильное приложение. Заполнив анкету с указанием желаемой суммы. После заполнения
+                    анкеты вы получите решение.
                 </li>
             </ol>
             <p><b>Обратите внимание!</b> Онлайн-расчет является предварительным, решение может меняться в зависимости от
@@ -157,7 +158,7 @@
 
         <section id="requirement-section">
             <div>
-                <h6>Требования к заемщику</h6>
+                <h2 class="text-center">Требования к заемщику</h2>
                 <ul>
                     <li class="list-group-item  d-flex align-items-start">
                         <i class="bi bi-check h4"></i>Возраст от 21-60
@@ -180,7 +181,7 @@
         </section>
 
         <section id="calculator-section">
-            <h2>Рассчитайте стоимость</h2>
+            <h2 class="text-center">Рассчитайте стоимость</h2>
             <div class="range-container">
                 <label for="amount" class="form-label d-flex justify-content-between align-items-center">
                     Сумма кредита
@@ -203,7 +204,13 @@
         </section>
 
         <section id="qa-section">
-            <h2 style="text-align: center;">Вопросы и ответы</h2>
+            <h2 class="text-center">Вопросы и ответы</h2>
+        </section>
+
+        <section id="map-section">
+            <gmp-map center="41.22017624823493, 69.21050738517218" zoom="15" map-id="DEMO_MAP_ID" style="height: 400px">
+                <gmp-advanced-marker position="41.22017624823493, 69.21050738517218" title="Kreditomat24"></gmp-advanced-marker>
+            </gmp-map>
         </section>
 
         <section id="footer-section">
@@ -229,28 +236,13 @@
                         <p>г. Ташкент, Сергели VII, 65-дом, 1-кв.</p>
                         <p>Орентир: 4-метро "Янги Хаёт", 10-Поликлиника</p>
                     </div>
-                    <div class="col">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">О нас</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Реквизиты</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Документы</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>
+        
+        <a href="#" id="up-button">
+            <i class="bi bi-caret-up-fill"></i>
+        </a>
     </div>
 
 
@@ -278,7 +270,7 @@
         }
         function onDayChange(value) {
             document.getElementById("day-value").innerHTML = value
-        }        
+        }
     </script>
 </body>
 
