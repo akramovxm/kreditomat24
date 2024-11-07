@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="styles/main.css">
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKT0_PimYrzlNdQyq8568CWtLa4-uoSL4&loading=async&callback=console.debug&libraries=maps,marker&v=beta">
@@ -17,7 +18,7 @@
 <body>
     <ul class="nav justify-content-end align-items-center">
         <li class="nav-item">
-            <a href="https://t.me/a/#1287560893" class="nav-link">
+            <a href="https://t.me/kreditomat1" class="nav-link">
                 <i class="bi bi-telegram h4"></i>
             </a>
         </li>
@@ -32,18 +33,20 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            <a class="nav-link dropdown-toggle lang" data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">Язык</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Узбекский</a></li>
-                <li><a class="dropdown-item" href="#">Русский</a></li>
+                <li><a class="dropdown-item uz" href="#" onclick="changeLang('uz')">Узбекский</a></li>
+                <li><a class="dropdown-item ru" href="#" onclick="changeLang('ru')">Русский</a></li>
             </ul>
         </li>
     </ul>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="logo" width="200">
+            </a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -52,34 +55,31 @@
             <div class="navbar-collapse collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#advantage-section">Плюсы</a>
+                        <a class="nav-link advantages" href="#advantage-section">Плюсы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#requirement-section">Требования к заемщику</a>
+                        <a class="nav-link requirements" href="#requirement-section">Требования к заемщику</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#calculator-section">Рассчитайте стоимость</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#qa-section">Вопросы и ответы</a>
+                        <a class="nav-link calculator" href="#calculator-section">Рассчитайте стоимость</a>
                     </li>
                     <li class="nav-item d-sm-none">
-                        <a class="nav-link" href="#">Как получить микрозайм?</a>
+                        <a class="nav-link getMicroloan" href="#how-get-section">Как получить микрозайм?</a>
                     </li>
                     <li class="nav-item d-sm-none">
-                        <a class="nav-link" href="#">Как погасить микрозайм?</a>
+                        <a class="nav-link payMicroloan" href="#how-pay-section">Как погасить микрозайм?</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <ul class="questions-container nav d-none d-sm-flex">
+    <ul class="questions-container nav d-none d-sm-flex animate__animated animate__slideInLeft">
         <li class="nav-item">
-            <a class="nav-link" href="#">Как получить микрозайм?</a>
+            <a class="nav-link getMicroloan" href="#how-get-section">Как получить микрозайм?</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Как погасить микрозайм?</a>
+            <a class="nav-link payMicroloan" href="#how-pay-section">Как погасить микрозайм?</a>
         </li>
     </ul>
 
@@ -87,129 +87,156 @@
         <section id="banner-section">
             <div class="row align-items-center">
                 <div class="col-sm-12 col-md-6">
-                    <h2><b>"Деньги до зарплаты"</b> - микрозайм на срочные нужды на короткий срок!</h2>
+                    <h2 class="banner animate__animated animate__fadeIn"><b>"Деньги до зарплаты"</b> - микрозайм на срочные нужды на короткий срок!</h2>
                 </div>
                 <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
-                    <img class="banner-img" src="img/microloan.png" alt="banner">
+                    <img class="banner-img floating" src="img/microloan.png" alt="banner">
                 </div>
             </div>
         </section>
 
         <section id="advantage-section">
-            <h2 class="text-center">Плюсы обращения в нашу МФО</h2>
+            <h2 class="text-center advantageML">Плюсы обращения в нашу МФО</h2>
 
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-lg-3 advantage-item">
                         <img src="img/documentation.png" alt="asset" class="advantage-img">
-                        <h6>Лишние документы не требуем!</h6>
+                        <h6 class="additionalDocs">Лишние документы не требуем!</h6>
                     </div>
                     <div class="col-6 col-lg-3 advantage-item">
                         <img src="img/salary.png" alt="payment-method" class="advantage-img">
-                        <h6>Мы не требуем подтверждение Вашего дохода!</h6>
+                        <h6 class="incomeProof">Мы не требуем подтверждение Вашего дохода!</h6>
                     </div>
                     <div class="col-6 col-lg-3 advantage-item">
                         <img src="img/fast-time.png" alt="documents" class="advantage-img">
-                        <h6>Операция проводится менее чем за 10 минут!</h6>
+                        <h6 class="operateDuration">Операция проводится менее чем за 10 минут!</h6>
                     </div>
                     <div class="col-6 col-lg-3 advantage-item">
                         <img src="img/payment-method.png" alt="payment-method" class="advantage-img">
-                        <h6>Наличными и на собственную карту!</h6>
+                        <h6 class="cashOrCard">Наличными и на собственную карту!</h6>
                     </div>
                     <div class="col-6 col-lg-3 advantage-item">
                         <img src="img/conversation.png" alt="conversation" class="advantage-img">
-                        <h6>Все открыто и прозрачно</h6>
+                        <h6 class="openAndTransparent">Все открыто и прозрачно</h6>
                     </div>
                 </div>
             </div>
 
-            <h3>Кредит в Kreditomat24</h3>
-            <p>Компания Kreditomat24 предлагает такие преимущества:</p>
+            <h3 class="creditInKreditomat24">Кредит в Kreditomat24</h3>
+            <p class="advText">Компания Kreditomat24 предлагает такие преимущества:</p>
             <ul>
                 <li class="list-group-item d-flex align-items-start">
-                    <i class="bi bi-check h4"></i>деньги до зарплаты в размере до 1 500 000 млн сум <b>БЕЗ ЗАЛОГА</b>;
+                    <i class="bi bi-check h4"></i>
+                    <span class="noDeposit">деньги до зарплаты в размере до 1 500 000 сум <b>БЕЗ ЗАЛОГА</b>;</span>
                 </li>
                 <li class="list-group-item d-flex align-items-start">
-                    <i class="bi bi-check h4"></i>компания не требует подтверждения Вашего официального дохода быстрое
-                    рассмотрение заявок — процесс займет 5-10 минут;
+                    <i class="bi bi-check h4"></i>
+                    <span class="proofAndOperate">компания не требует подтверждения Вашего официального дохода быстрое рассмотрение заявок — процесс займет 5-10 минут;</span>
                 </li>
                 <li class="list-group-item d-flex align-items-start">
-                    <i class="bi bi-check h4"></i>честное и прозрачное сотрудничество — наши услуги лицензированы
-                    Центральным Банком РУз.
+                    <i class="bi bi-check h4"></i>
+                    <span class="centralBank">честное и прозрачное сотрудничество — наши услуги лицензированы Центральным Банком РУз.</span>
                 </li>
             </ul>
+        </section>
 
-            <h3>Как взять займы?</h3>
-            <p>В нашей МФО можно оставить заявку:</p>
+        <section id="how-get-section">
+            <h2 class="text-center howGet">Как взять займы?</h2>
+            <p class="application">В нашей МФО можно оставить заявку:</p>
             <ol>
-                <li>
+                <li class="branches">
                     В любом из филиалов. Обратитесь в офис компании в рабочее время, подготовив необходимые документы.
                 </li>
-                <li>
+                <li class="onlineApp">
                     Онлайн — через мобильное приложение. Заполнив анкету с указанием желаемой суммы. После заполнения
                     анкеты вы получите решение.
                 </li>
             </ol>
-            <p><b>Обратите внимание!</b> Онлайн-расчет является предварительным, решение может меняться в зависимости от
+            <p class="warning"><b>Обратите внимание!</b> Онлайн-расчет является предварительным, решение может меняться в зависимости от
                 предоставленной вами личной информации.</p>
-            <p>В случае положительного ответа стороны заключают договор, заемщик сразу получает деньги. Средства
+            <p class="accept">В случае положительного ответа стороны заключают договор, заемщик сразу получает деньги. Средства
                 выдаются как наличными (в отделении), так и на банковскую карту — на усмотрение клиента.</p>
+        </section>
+
+        <section id="how-pay-section">
+            <h2 class="text-center howPay mb-3">Как погасить займы?</h2>
+
+            <div class="row">
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-end">
+                    <img src="img/payme.svg" alt="payme" class="mobileApp-img">
+                    <p class="app-name payme">С помощью мобильного приложения Payme</p>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-end">
+                    <img src="img/click.png" alt="payme" class="mobileApp-img">
+                    <p class="app-name click">С помощью мобильного приложения Click</p>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-end">
+                    <img src="img/paynet.svg" alt="payme" class="mobileApp-img">
+                    <p class="app-name paynet">С помощью мобильного приложения Paynet</p>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-end">
+                    <img src="img/uzum.png" alt="payme" class="mobileApp-img">
+                    <p class="app-name uzum">С помощью мобильного приложения Uzum</p>
+                </div>
+            </div>
         </section>
 
         <section id="requirement-section">
             <div>
-                <h2 class="text-center">Требования к заемщику</h2>
+                <h2 class="text-center reqClient">Требования к заемщику</h2>
                 <ul>
                     <li class="list-group-item  d-flex align-items-start">
-                        <i class="bi bi-check h4"></i>Возраст от 21-60
+                        <i class="bi bi-check h4"></i>
+                        <span class="age">Возраст от 21-60</span>
                     </li>
                     <li class="list-group-item  d-flex align-items-start">
-                        <i class="bi bi-check h4"></i>Оригинал документа удостоверяющий личность (паспорт, водительские
-                        права, вид на жительство)
+                        <i class="bi bi-check h4"></i>
+                        <span class="docs">Оригинал документа удостоверяющий личность (паспорт, водительские
+                            права, вид на жительство)</span>
                     </li>
                     <li class="list-group-item  d-flex align-items-start">
-                        <i class="bi bi-check h4"></i>Наличие личной пластиковой карты
+                        <i class="bi bi-check h4"></i>
+                        <span class="plastic">Наличие личной пластиковой карты</span>
                     </li>
                     <li class="list-group-item  d-flex align-items-start">
-                        <i class="bi bi-check h4"></i>Отсутствие задолженности БПИ
+                        <i class="bi bi-check h4"></i>
+                        <span class="noDebt">Отсутствие задолженности БПИ</span>
                     </li>
                     <li class="list-group-item  d-flex align-items-start">
-                        <i class="bi bi-check h4"></i>Отсутствие действующих кредитов
+                        <i class="bi bi-check h4"></i>
+                        <span class="noCurrentCredit">Отсутствие действующих кредитов</span>
                     </li>
                 </ul>
             </div>
         </section>
 
         <section id="calculator-section">
-            <h2 class="text-center">Рассчитайте стоимость</h2>
+            <h2 class="text-center calculate">Рассчитайте стоимость</h2>
             <div class="range-container">
                 <label for="amount" class="form-label d-flex justify-content-between align-items-center">
-                    Сумма кредита
+                    <p class="creditAmount">Сумма кредита</p>
                     <p><b id="amount-value">500000</b> UZS</p>
                 </label>
                 <input type="range" class="form-range" min="0" max="1500000" step="10000" id="amount"
                     onchange="onAmountChange(this.value)" value="500000">
 
                 <label for="day" class="form-label d-flex justify-content-between align-items-center">
-                    Срок кредитования
-                    <p><b id="day-value">10</b> дней</p>
+                    <p class="loanTerm">Срок кредитования</p>
+                    <p><b id="day-value">10</b> <span class="day">дней</span></p>
                 </label>
                 <input type="range" class="form-range" min="1" max="10" step="1" id="day"
                     onchange="onDayChange(this.value)" value="10" disabled>
             </div>
             <div id="result">
-                <p>Через 10 дней платеж составит:</p>
+                <p class="after10">Через 10 дней платеж составит:</p>
                 <h4><b id="result-value">700000</b> UZS</h4>
             </div>
         </section>
 
-        <section id="qa-section">
-            <h2 class="text-center">Вопросы и ответы</h2>
-        </section>
-
         <section id="map-section">
-            <gmp-map center="41.22017624823493, 69.21050738517218" zoom="15" map-id="DEMO_MAP_ID" style="height: 400px">
-                <gmp-advanced-marker position="41.22017624823493, 69.21050738517218" title="Kreditomat24"></gmp-advanced-marker>
+            <gmp-map center="41.2168480334366, 69.21721395312711" zoom="15" map-id="DEMO_MAP_ID" style="height: 400px">
+                <gmp-advanced-marker position="41.2168480334366, 69.21721395312711" title="Kreditomat24"></gmp-advanced-marker>
             </gmp-map>
         </section>
 
@@ -217,24 +244,24 @@
             <div class="container">
                 <div class="row column-gap-2">
                     <div class="col">
-                        <p><b>Контакты</b></p>
+                        <p><b class="contact">Контакты</b></p>
                         <div class="contact-item">
                             <i class="bi bi-telephone-fill h4 contact-icon"></i>
                             <p>+998 (99) 640-28-28</p>
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-envelope-fill h4 contact-icon"></i>
-                            <p>kreditomat24@mail.com</p>
+                            <p>kreditomat2024@gmail.com</p>
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-clock-fill h4 contact-icon"></i>
-                            <p>09:00 - 18:00 с Пн по Пт</p>
+                            <p>09:00 - 18:00 <span class="week">с Пн по Пт</span></p>
                         </div>
                     </div>
                     <div class="col">
-                        <p><b>Адрес</b></p>
-                        <p>г. Ташкент, Сергели VII, 65-дом, 1-кв.</p>
-                        <p>Орентир: 4-метро "Янги Хаёт", 10-Поликлиника</p>
+                        <p><b class="addressSen">Адрес</b></p>
+                        <p class="address">г. Ташкент, Сергели VII, 65-дом, 1-кв.</p>
+                        <p class="landmark">Орентир: 4-метро "Янги Хаёт", 10-Поликлиника</p>
                     </div>
                 </div>
             </div>
@@ -270,6 +297,73 @@
         }
         function onDayChange(value) {
             document.getElementById("day-value").innerHTML = value
+        }
+    </script>
+    <script>
+        const obj = {
+            lang: {uz: "Til", ru: "Язык"},
+            uz: {uz: "O'zbek", ru: "Узбекский"},
+            ru: {uz: "Ruscha", ru: "Русский"},
+            advantages: {uz: "Afzalliklar", ru: "Плюсы"},
+            requirements: {uz: "Talablar", ru: "Требования к заемщику"},
+            calculator: {uz: "Narxni hisoblang", ru: "Рассчитайте стоимость"},
+            getMicroloan: {uz: "Mikrokreditni qanday olinadi?", ru: "Как получить микрозайм?"},
+            payMicroloan: {uz: "Mikrokreditni qanday to'lanadi?", ru: "Как погасить микрозайм?"},
+            banner: {uz: "<b>\"Oylikgacha pul mablag'i\"</b> - qisqa muddadtli, shoshilinch ehtiyojlar uchun mikroqarz", ru: "<b>\"Деньги до зарплаты\"</b> - микрозайм на срочные нужды на короткий срок!"},
+            advantageML: {uz: "Mikromoliya tashkilotimizga murojaat qilishning afzalliklari", ru: "Плюсы обращения в нашу МФО"},
+            additionalDocs: {uz: "Ortiqcha hujjatlar talab qilmaymiz!", ru: "Лишние документы не требуем!"},
+            incomeProof: {uz: "Biz daromadingizni tasdiqlovchi hujjat talab qilmaymiz!", ru: "Мы не требуем подтверждение Вашего дохода!"},
+            operateDuration: {uz: "Operatsiya 10 daqiqa ichida tugaydi!", ru: "Операция проводится менее чем за 10 минут!"},
+            cashOrCard: {uz: "Naqd pul yoki shaxsiy kartangizga!", ru: "Наличными и на собственную карту!"},
+            openAndTransparent: {uz: "Hammasi ochiq va shaffof", ru: "Все открыто и прозрачно"},
+            creditInKreditomat24: {uz: "Kreditomat24 da kredit", ru: "Кредит в Kreditomat24"},
+            advText: {uz: "Kreditomat24 kompaniyasi quyidagi afzalliklarni taklif etadi:", ru: "Компания Kreditomat24 предлагает такие преимущества:"},
+            noDeposit: {uz: "<b>GAROVSIZ</b> 1 500 000 so'mgacha bo'lgan oylikgacha pul mablag'lari;", ru: "деньги до зарплаты в размере до 1 500 000 сум <b>БЕЗ ЗАЛОГА</b>;"},
+            proofAndOperate: {uz: "kompaniya sizning rasmiy daromadingizni tasdiqlovchi hujjat talab qilmaydi - bu jarayon 5-10 daqiqa davom etadi;", ru: "компания не требует подтверждения Вашего официального дохода быстрое рассмотрение заявок — процесс займет 5-10 минут;"},
+            centralBank: {uz: "rostgo'y va shaffof hamkorlik - bizning xizmatlarimiz O'zbekiston Respublikasi Markaziy banki tomonidan litsenziyalangan.", ru: "честное и прозрачное сотрудничество — наши услуги лицензированы Центральным Банком РУз."},
+            howGet: {uz: "Qanday qilib kredit olish mumkin?", ru: "Как взять займы?"},
+            howPay: {uz: "Kreditni qanday qaytarish kerak?", ru: "Как погасить займы?"},
+            application: {uz: "Siz bizning Mirkomoliya tashkilotimizda ariza qoldirishingiz mumkin:", ru: "В нашей МФО можно оставить заявку:"},
+            branches: {uz: "Filiallarimizdan birida. Kerakli hujjatlarni tayyorlab, ish vaqtida kompaniyamizga murojaat qiling.", ru: "В любом из филиалов. Обратитесь в офис компании в рабочее время, подготовив необходимые документы."},
+            onlineApp: {uz: "Onlayn - mobil ilova orqali. Istalgan miqdorni ko'rsatgan holda anketani to'ldiring. Anketani to'ldirgandan so'ng siz qaror qabul qilasiz.", ru: "Язык"},
+            warning: {uz: "<b>E'tibor bering!</b> Onlayn hisob-kitob taxminiy hisoblanadi, yakuniy qaror siz taqdim etgan shaxsiy ma'lumotlarga qarab o'zgarishi mumkin.", ru: "<b>Обратите внимание!</b> Онлайн-расчет является предварительным, решение может меняться в зависимости от предоставленной вами личной информации."},
+            accept: {uz: "Agar javob ijobiy bo'lsa, tomonlar shartnoma tuzishadi, qarz oluvchi pulni shu zahoti oladi. Mablag' mijozning xohishiga qarab naqd pul (filialda) beriladi yoki bank kartasiga o'tkaziladi.", ru: "В случае положительного ответа стороны заключают договор, заемщик сразу получает деньги. Средства выдаются как наличными (в отделении), так и на банковскую карту — на усмотрение клиента."},
+            reqClient: {uz: "Qarz oluvchiga qo'yiladigan talablar", ru: "Требования к заемщику"},
+            age: {uz: "21 yoshdan 60 yoshgacha", ru: "Возраст от 21-60"},
+            docs: {uz: "Shaxsni tasdiqlovchi hujjatning asl nusxasi (pasport, haydovchilik guvohnomasi, yashash uchun ruxsatnoma)", ru: "Оригинал документа удостоверяющий личность (паспорт, водительские права, вид на жительство)"},
+            plastic: {uz: "Shaxsiy plastik kartaning mavjudligi", ru: "Наличие личной пластиковой карты"},
+            noDebt: {uz: "MIB dan qarz yo'qligi", ru: "Отсутствие задолженности БПИ"},
+            noCurrentCredit: {uz: "Amaldagi boshqa kreditlar yo'qligi", ru: "Отсутствие действующих кредитов"},
+            calculate: {uz: "Narxni hisoblang", ru: "Рассчитайте стоимость"},
+            creditAmount: {uz: "Kredit summasi", ru: "Сумма кредита"},
+            loanTerm: {uz: "Kredit muddati", ru: "Срок кредитования"},
+            day: {uz: "kun", ru: "дней"},
+            after10: {uz: "10 kundan keyin to'lov quyidagicha bo'ladi:", ru: "Через 10 дней платеж составит:"},
+            contact: {uz: "Kontaktlar", ru: "Контакты"},
+            addressSen: {uz: "Manzil", ru: "Адрес"},
+            address: {uz: "Toshkent sh., Sergeli VII, 65-uy, 1-kv", ru: "г. Ташкент, Сергели VII, 65-дом, 1-кв."},
+            landmark: {uz: "Mo'ljal: 4-metro \"Yangi Xayot\" bekati, 10-Oilaviy poliklinika", ru: "Орентир: 4-метро \"Янги Хаёт\", 10-Поликлиника"},
+            payme: {uz: "Payme mobil ilovasi yordamida", ru: "С помощью мобильного приложения Payme"},
+            click: {uz: "Click mobil ilovasi yordamida", ru: "С помощью мобильного приложения Click"},
+            paynet: {uz: "Paynet mobil ilovasi yordamida", ru: "С помощью мобильного приложения Paynet"},
+            uzum: {uz: "Uzum mobil ilovasi yordamida", ru: "С помощью мобильного приложения Uzum"},
+        }
+
+        const lang = localStorage.getItem("lang")
+
+        if (lang) {
+            changeLang(lang)
+        }
+
+        function changeLang(lang) {
+            localStorage.setItem("lang", lang)
+
+            for (const [key, value] of Object.entries(obj)) {
+                const elements = document.getElementsByClassName(key)
+                for (elem of elements) {
+                    elem.innerHTML = value[lang]
+                }
+            }
         }
     </script>
 </body>
